@@ -19,9 +19,15 @@ const Add: React.FC<IAddProps> = ({ setTask }) => {
         setValue("");
     }
 
+    const enterSubmit = (e: any): void => {
+        if(value && e.key === 'Enter'){
+            addTask();
+        }
+    }
+
     return (
         <div className="add-task">
-            <input type="text" placeholder="Add.." onChange={handleChange} value={value} name="add" />
+            <input type="text" placeholder="Add.." onChange={handleChange} value={value} name="add" onKeyDown={enterSubmit}/>
             <Button onClick={() => addTask()} iconClass="fas fa-plus" />
         </div>
     )

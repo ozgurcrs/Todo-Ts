@@ -9,7 +9,7 @@ const Cards: React.FC<ICard> = ({ tasks, deleteTask }) => {
                 <div className="tasks">
                     {tasks.map((item: any) => {
                         return (
-                            <Card tasks={item} deleteTask={deleteTask} />
+                            <Card key={item.taskId} tasks={item} deleteTask={deleteTask} />
                         )
                     }
                     )}
