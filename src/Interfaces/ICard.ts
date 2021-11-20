@@ -1,4 +1,4 @@
 export interface ICard {
-    tasks: any,
+    tasks: object,
     deleteTask: Function
 }
