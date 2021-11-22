@@ -1,5 +1,5 @@
-
+import { ITask } from './ITask';
 export interface IAddProps {
     setTask: Function;
-    tasks: any;
+    tasks: Array<ITask>
 }
